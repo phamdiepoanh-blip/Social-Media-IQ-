@@ -7,7 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"stylesheet">
   <style>
     :root{--bg:#07121a;--card:#0b2430;--accent:#7b61ff;--accent2:#66f0d9;--text:#e6fbff}
-    html,body{height:100%;margin:0;background:radial-gradient(circle at 10% 10%, rgba(123,97,255,0.07) 0%, transparent 10%), linear-gradient(180deg,#021018 0%, #041f2a 100%);font-family:"Orbitron",monospace;color:var(--text);-webkit-font-smoothing:antialiased}
+   html,body {margin: 0;height: 100vh;background: url("file:///C:/Users/Administrator/Downloads/Thi%E1%BA%BFt%20k%E1%BA%BF%20ch%C6%B0a%20c%C3%B3%20t%C3%AAn.png") no-repeat center center fixed;background-size: cover;font-family:"Orbitron",monospace;color:var(--text);-webkit-font-smoothing:antialiased;}
+
     .container{max-width:900px;margin:30px auto;padding:24px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 10px 40px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
     header{display:flex;align-items:center;gap:18px}
     .logo{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(102,240,217,0.09) inset}
@@ -54,10 +55,18 @@
   </style>
 </head>
 <body>
-  <audio id="bg-music" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4d1b7e7d9b.mp3?filename=mystical-background-110624.mp3" type="audio/mpeg">
-  </audio>
-  <div class="container">
+<audio id="bg-music" autoplay loop muted>
+  <source src="file:///D:/Tr%C3%A0/Social%20media%20IQ/yt1s.gg--MATRIX-Concentration-Programming-music-Original-Matrix-effect-not.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener("click", () => {
+    const music = document.getElementById("bg-music");
+    music.muted = false;
+    music.play();
+  }, { once: true });
+</script>
+  </audio>  <div class="container">
     <header>
       <div class="logo"><span>SM-IQ</span></div>
       <div>
@@ -70,7 +79,7 @@
       <div class="card">
         <div class="intro">
           <div class="typing" id="introText"></div>
-          <button class="btn" id="startBtn">Bắt đầu</button>
+          <img id="startBtn" src="file:///D:/Tr%C3%A0/Social%20media%20IQ/start.png-removebg-preview.png" alt="Start" style="width:200px; cursor:pointer;">
         </div>
 
         <div id="gameArea" style="display:none">
